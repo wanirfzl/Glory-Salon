@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register | Glory Salon</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: Poppins, sans-serif;
+      background-color: #fff3f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(90deg,#f48fb1,#f06292);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 40px;
+      height: 70px;
+      box-shadow: 0 6px 20px rgba(160,60,100,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .left-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-img {
+      height: 75px;
+      width: auto;
+      border-radius: 10px;
+    }
+
+    .site-title {
+      font-family: 'Great Vibes', cursive;
+      font-size: 46px;
+      letter-spacing: 4px;
+      margin: 0;
+      color: white;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 700;
+      font-family: Poppins, sans-serif;
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    /* RESPONSIVE HEADER */
+    @media screen and (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 12px 20px;
+      }
+      nav {
+        margin-top: 8px;
+      }
+    }
+
+    /* REGISTER FORM */
+    .register-container {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      width: 400px;
+      text-align: center;
+      margin: 60px auto;
+    }
+
+    h2 {
+      color: #ec407a;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: Poppins, sans-serif;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #ec407a;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: Poppins, sans-serif;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #d81b60;
+    }
+
+    a {
+      color: #ec407a;
+      text-decoration: none;
+    }
+
+    a:hover { text-decoration: underline; }
+
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="left-header">
+      <img src="images/logo.jpg" class="logo-img" alt="Glory Salon Logo">
+      <h1 class="site-title">Glory Salon</h1>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="booking.html">Book Now</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <!-- REGISTER FORM -->
+  <div class="register-container">
+    <h2>Create Your Account</h2>
+    <form action="register_process.php" method="POST">
+      <input type="text" name="fullname" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <select name="role">
+        <option value="customer">Customer</option>
+        <option value="staff">Staff</option>
+      </select>
+      <button type="submit">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </div>
+
+</body>
+</html>
